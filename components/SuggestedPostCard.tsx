@@ -21,7 +21,7 @@ export default function PostCard({ post }: { post: Post }) {
       <h2 className="pb-3 text-xl font-semibold text-zinc-800 dark:text-zinc-200">
         <Link href={`/posts/${post.slug}`}>{post.title}</Link>
       </h2>
-      <div className="flex items-center space-x-2 text-zinc-500 dark:text-zinc-400">
+      <div className="flex items-center space-x-2 text-zinc-500 dark:white">
         <Link href={`/author/${post.metadata.author?.slug}`}>
           <Image
             className="h-8 w-8 rounded-full"
@@ -33,14 +33,14 @@ export default function PostCard({ post }: { post: Post }) {
         </Link>
         <div>
           <span>
-            by{' '}
+            escrito por{' '}
             <a
               href={`/author/${post.metadata.author?.slug}`}
               className="font-semibold text-green-600 dark:text-green-200"
             >
               {post.metadata.author?.title}
             </a>{' '}
-            on {helpers.stringToFriendlyDate(post.metadata.published_date)}
+            el {helpers.stringToFriendlyDate(post.metadata.published_date)}
           </span>
         </div>
       </div>
