@@ -12,7 +12,7 @@ export default function Footer(): JSX.Element {
           </span>
         </div>
       </a> */}
-      <div className="text-zinc-700 dark:text-zinc-300">
+      <div className="text-white dark:text-white">
         &copy;&nbsp;&nbsp;{new Date().getFullYear()} Crecimiento Espiritual
       </div>
     </footer>

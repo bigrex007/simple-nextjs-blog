@@ -29,7 +29,7 @@ export default function PostCard({ post }: { post: Post }) {
         <Link href={`/posts/${post.slug}`}>{post.title}</Link>
       </h2>
       <div className="flex flex-col justify-between space-y-4 md:flex-row md:space-y-0">
-        <div className="flex items-center space-x-2 text-zinc-500 dark:text-zinc-400 md:space-y-0">
+        <div className="flex items-center space-x-2 text-white dark:text-white md:space-y-0">
           <AuthorAvatar post={post} />
           <AuthorAttribution post={post} />
         </div>
@@ -41,15 +41,15 @@ export default function PostCard({ post }: { post: Post }) {
         </div>
       </div>
       <div
-        className="py-6 text-zinc-500 dark:text-zinc-300"
+        className="py-6 text-white dark:text-white"
         dangerouslySetInnerHTML={{
           __html: sanitize(post.metadata.teaser) ?? '',
         }}
       />
-      <div className="flex items-center justify-between font-medium text-green-600 dark:text-green-200">
+      <div className="flex items-center justify-between font-medium text-green-600 dark:text-blue-300">
         <Link href={`/posts/${post.slug}`}>
           <div className="flex items-center space-x-2">
-            <span>Read more</span>
+            <span>Leer más</span>
             <ArrowRight className="h-4 w-4 text-inherit" />
           </div>
         </Link>

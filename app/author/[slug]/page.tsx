@@ -19,7 +19,7 @@ export default async ({ params }: { params: { id: string; slug: string } }) => {
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-col px-4 lg:px-0">
-      <h1 className="my-4 text-4xl font-bold leading-tight tracking-tight text-zinc-700 dark:text-zinc-300">
+      <h1 className="my-4 text-4xl font-bold leading-tight tracking-tight text-white dark:text-white">
         Publicaciones de {author.title}
       </h1>
       <div className="space-y-16">
