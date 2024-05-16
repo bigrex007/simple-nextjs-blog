@@ -31,6 +31,26 @@ export async function getGlobalData(): Promise<GlobalData> {
   return Promise.resolve({} as GlobalData);
 }
 
+export async function getGlobalData(): Promise<GlobalData> {
+  // Get global data
+  try {
+    const data: any = await Promise.resolve(
+      cosmic.objects
+        .findOne({
+          type: 'globals',
+          slug: 'header',
+        })
+        .props('metadata.site_title,metadata.site_tag')
+        .depth(1)
+    );
+    const siteData: GlobalData = data.object;
+    return Promise.resolve(siteData);
+  } catch (error) {
+    console.log('Oof', error);
+  }
+  return Promise.resolve({} as GlobalData);
+}
+
 export async function getAllPosts(): Promise<Post[]> {
   try {
     // Get all posts
